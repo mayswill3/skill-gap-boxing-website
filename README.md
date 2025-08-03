@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Skill Gap Promotion & Management Website
+
+A professional boxing promotion and management website built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🥊 Professional boxing promotion theme
+- 📱 Fully responsive design
+- ⚡ Static site generation for fast loading
+- 🎨 Custom Montserrat font integration
+- 🖼️ Professional brand assets integrated
+- 📧 Contact form for inquiries
+- 🏆 Sections for fighters, events, and services
 
 ## Getting Started
 
-First, run the development server:
+### Development
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build the static website:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+This will generate a static website in the `out/` directory that can be deployed to any static hosting service.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment Options
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Since this is a static website, you can deploy the contents of the `out/` folder to:
 
-## Deploy on Vercel
+- **GitHub Pages**: Upload the `out/` folder contents
+- **Netlify**: Drag and drop the `out/` folder
+- **Vercel**: Connect your repository for automatic deployments
+- **Any static hosting service**: Upload the `out/` folder contents
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx          # Main layout with header/footer
+│   │   ├── page.tsx            # Homepage with all sections
+│   │   └── globals.css         # Global styles and fonts
+│   └── components/
+│       ├── Header.tsx          # Navigation header
+│       └── Footer.tsx          # Site footer
+├── public/
+│   └── assets/                 # Brand assets (logos, fonts, etc.)
+└── out/                        # Generated static files (after build)
+```
+
+## Customization
+
+- **Colors**: Edit the color scheme in the Tailwind classes (primarily red-600 theme)
+- **Content**: Update the text content in `src/app/page.tsx`
+- **Brand Assets**: Replace files in `public/assets/` with your own
+- **Contact Info**: Update contact details in the Contact section and Footer
+- **Fighters/Events**: Add real content when available
+
+## Technologies Used
+
+- Next.js 15 with App Router
+- TypeScript
+- Tailwind CSS v4
+- Custom Montserrat fonts
+- Static site generation
