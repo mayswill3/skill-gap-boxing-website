@@ -5,7 +5,16 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section id="home" className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen flex items-center pt-16">
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/hero-boxer.jpg"
+            alt="Professional Boxing"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center text-white">
             <div className="mb-8">
@@ -54,6 +63,18 @@ export default function Home() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We are dedicated to discovering, developing, and promoting exceptional boxing talent while providing comprehensive management services that ensure our fighters reach their full potential.
             </p>
+          </div>
+          
+          <div className="mb-16">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src="/assets/training-action.jpg"
+                alt="Professional Boxing Training"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20"></div>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -160,43 +181,39 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="h-64 bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold">Featured Fighter</h3>
-                </div>
+              <div className="relative h-96">
+                <Image
+                  src="/assets/fighter-portrait-1.jpg"
+                  alt="Carlos Moreno - Founder & Professional Boxer"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-bold text-gray-900 mb-2">Coming Soon</h4>
-                <p className="text-gray-600 mb-4">We are currently building our roster of elite fighters. Check back soon to meet our champions.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Carlos Moreno</h4>
+                <p className="text-gray-600 mb-4">Our founder started boxing at 15, had his first amateur bout at 18 vs Carl Marsh (son of former world champion Terry Marsh). Reached national semi-finals in 2008, won Haringey Box Cup gold in 2009, and ended his amateur career in 2014 with the Elite Portuguese National Title.</p>
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>Division: TBA</span>
-                  <span>Record: TBA</span>
+                  <span>Founder & Fighter</span>
+                  <span>34+ Fights</span>
                 </div>
               </div>
             </div>
             
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="h-64 bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold">Featured Fighter</h3>
-                </div>
+              <div className="relative h-96">
+                <Image
+                  src="/assets/dante-munisi-cropped.png"
+                  alt="Dante Munisi - Professional Boxer"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-bold text-gray-900 mb-2">Coming Soon</h4>
-                <p className="text-gray-600 mb-4">We are currently building our roster of elite fighters. Check back soon to meet our champions.</p>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Dante Munisi</h4>
+                <p className="text-gray-600 mb-4">A seasoned fighter with over 100 bouts under his belt. His goal is simple and unwavering - to be a champion. That's all.</p>
                 <div className="flex justify-between text-sm text-gray-500">
-                  <span>Division: TBA</span>
-                  <span>Record: TBA</span>
+                  <span>100+ Bouts</span>
+                  <span>Championship Goal</span>
                 </div>
               </div>
             </div>
@@ -236,27 +253,40 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-800 rounded-lg p-8 border border-gray-700">
-              <div className="flex items-center justify-between mb-6">
-                <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">UPCOMING</span>
-                <span className="text-gray-400">TBA 2024</span>
+            <div className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
+              <div className="relative h-64">
+                <Image
+                  src="/assets/promotion-poster.jpg"
+                  alt="Boxing Promotion Event"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute top-4 left-4">
+                  <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">UPCOMING</span>
+                </div>
+                <div className="absolute top-4 right-4">
+                  <span className="bg-black/60 text-white px-3 py-1 rounded-full text-sm">TBA 2024</span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Championship Night</h3>
-              <p className="text-gray-300 mb-6">
-                An evening of professional boxing featuring title fights and rising contenders. Details to be announced.
-              </p>
-              <div className="space-y-2 text-sm text-gray-400">
-                <div className="flex justify-between">
-                  <span>Venue:</span>
-                  <span>TBA</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Main Event:</span>
-                  <span>TBA</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Tickets:</span>
-                  <span>Coming Soon</span>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold mb-4">Championship Night</h3>
+                <p className="text-gray-300 mb-6">
+                  An evening of professional boxing featuring title fights and rising contenders. Details to be announced.
+                </p>
+                <div className="space-y-2 text-sm text-gray-400">
+                  <div className="flex justify-between">
+                    <span>Venue:</span>
+                    <span>TBA</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Main Event:</span>
+                    <span>TBA</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Tickets:</span>
+                    <span>Coming Soon</span>
+                  </div>
                 </div>
               </div>
             </div>

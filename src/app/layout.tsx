@@ -6,6 +6,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Skill Gap Promotion & Management - Professional Boxing Promotion",
   description: "Premier boxing promotion and management company. Discover talented fighters, exciting events, and professional boxing services.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
