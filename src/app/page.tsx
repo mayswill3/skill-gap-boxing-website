@@ -259,7 +259,7 @@ export default function Home() {
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">Bailey Legg</h4>
-                <p className="text-gray-600 mb-4">Undefeated rising star at 63kg with lightning speed and technical precision. Bailey combines youth with championship ambition, showcasing exceptional footwork and ring IQ that has kept him perfect through 5 professional fights. A dedicated athlete with the heart of a champion.</p>
+                <p className="text-gray-600 mb-4">Undefeated rising star at 63kg with lightning speed and technical precision. Bailey combines youth with championship ambition, showcasing exceptional footwork and ring IQ that has kept him perfect through 5 white collar fights. A dedicated athlete with the heart of a champion.</p>
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>63kg Division</span>
                   <span>5-0 (1 KO)</span>
