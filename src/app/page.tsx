@@ -190,7 +190,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-96">
                 <Image
@@ -232,14 +232,14 @@ export default function Home() {
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-96">
                 <Image
-                  src="/assets/julio-chavez-fighter.jpg"
-                  alt="Julio Chavez - Professional Boxer"
+                  src="/assets/hulio-chavez-fighter.jpg"
+                  alt="Hulio Chavez - Professional Boxer"
                   fill
                   className="object-cover object-top"
                 />
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-bold text-gray-900 mb-2">Julio Chavez</h4>
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Hulio Chavez</h4>
                 <p className="text-gray-600 mb-4">120+ amateur fights with 4-1 professional record and Right2fight hall of fame 1-0. His goal is simple: to become champion and be involved in development of young fighters coming up. To be on a world stage to GLORIFY and showcase his skillset!</p>
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>Professional: 4-1</span>
@@ -263,6 +263,44 @@ export default function Home() {
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>63kg Division</span>
                   <span>5-0 (1 KO)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-96">
+                <Image
+                  src="/assets/soroush-saeedi-fighter.jpg"
+                  alt="Soroush S.S.S Saeedi - Professional Boxer"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Soroush "S.S.S" Saeedi</h4>
+                <p className="text-gray-600 mb-4">Young and determined fighter at just 19 years old with impressive physical attributes. Standing 180cm tall in the 75kg division, Soroush brings raw talent and hunger to prove himself in the professional ranks. Despite early setbacks, he's focused on growth and development.</p>
+                <div className="flex justify-between text-sm text-gray-500">
+                  <span>75kg • Age 19</span>
+                  <span>0-1 Record</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-96">
+                <Image
+                  src="/assets/kenz-bailey-fighter.jpg"
+                  alt="Kenz Bailey - Professional Boxer"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="p-6">
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Kenz Bailey</h4>
+                <p className="text-gray-600 mb-4">Fighting out of Derbyshire, Kenz has showcased real talent, determination and skill. Most notably fighting on viral boxing platform King of the Ring (KOTR). Every time he steps into the ring he's guaranteed to put on a show and cause problems for any opponent. Now partnered with Skill Gap x Provizion!</p>
+                <div className="flex justify-between text-sm text-gray-500">
+                  <span>Derbyshire</span>
+                  <span>3-1-1 Record</span>
                 </div>
               </div>
             </div>
