@@ -105,7 +105,7 @@ export default function OmariGrantProfile() {
                   "The Praying Mantis" for his unique fighting style.
                 </p>
                 <p>
-                  As a seven-time champion who has never lost a fight, Omari represents the perfect fusion of entertainment 
+                  As a nine-time champion who has never lost a fight, Omari represents the perfect fusion of entertainment 
                   and athletic excellence. His work extends beyond the ring as a community worker, earning recognition for 
                   his contributions to youth development and supporting people with disabilities through boxing.
                 </p>
