@@ -1,19 +1,29 @@
+'use client';
+
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Footer() {
+  const pathname = usePathname();
+  
+  // Check if we're on the main page
+  const isMainPage = pathname === '/';
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo and Company Info */}
           <div className="md:col-span-1">
-            <Image
-              src="/assets/Primary Logo/PNG/whitelogo.png"
-              alt="Skill Gap Promotion & Management"
-              width={150}
-              height={50}
-              className="h-12 w-auto mb-4"
-            />
+            <Link href="/" className="inline-block">
+              <Image
+                src="/assets/Primary Logo/PNG/whitelogo.png"
+                alt="Skill Gap Promotion & Management"
+                width={150}
+                height={50}
+                className="h-12 w-auto mb-4 hover:opacity-80 transition-opacity duration-200"
+              />
+            </Link>
             <p className="text-gray-400 text-sm mb-4">
               Elite boxing promotion and fighter management. Bridging the skill gap between potential and championship glory.
             </p>
@@ -47,34 +57,34 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-white transition-colors">
+                <Link href={isMainPage ? '#home' : '/#home'} className="text-gray-400 hover:text-white transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors">
+                <Link href={isMainPage ? '#about' : '/#about'} className="text-gray-400 hover:text-white transition-colors">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors">
+                <Link href={isMainPage ? '#services' : '/#services'} className="text-gray-400 hover:text-white transition-colors">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#fighters" className="text-gray-400 hover:text-white transition-colors">
+                <Link href={isMainPage ? '#fighters' : '/#fighters'} className="text-gray-400 hover:text-white transition-colors">
                   Fighters
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#events" className="text-gray-400 hover:text-white transition-colors">
+                <Link href={isMainPage ? '#events' : '/#events'} className="text-gray-400 hover:text-white transition-colors">
                   Events
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
+                <Link href={isMainPage ? '#contact' : '/#contact'} className="text-gray-400 hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

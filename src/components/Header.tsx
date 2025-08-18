@@ -2,17 +2,23 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const pathname = usePathname();
+  
+  // Check if we're on the main page
+  const isMainPage = pathname === '/';
+  
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Fighters', href: '#fighters' },
-    { name: 'Events', href: '#events' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: isMainPage ? '#home' : '/#home' },
+    { name: 'About', href: isMainPage ? '#about' : '/#about' },
+    { name: 'Services', href: isMainPage ? '#services' : '/#services' },
+    { name: 'Fighters', href: isMainPage ? '#fighters' : '/#fighters' },
+    { name: 'Events', href: isMainPage ? '#events' : '/#events' },
+    { name: 'Contact', href: isMainPage ? '#contact' : '/#contact' },
   ];
 
   return (
@@ -21,26 +27,28 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image
-              src="/assets/Primary Logo/PNG/blacklogo.png"
-              alt="Skill Gap Promotion & Management"
-              width={240}
-              height={72}
-              className="h-16 w-auto"
-              priority
-            />
+            <Link href="/" className="block">
+              <Image
+                src="/assets/Primary Logo/PNG/blacklogo.png"
+                alt="Skill Gap Promotion & Management"
+                width={240}
+                height={72}
+                className="h-16 w-auto hover:opacity-80 transition-opacity duration-200"
+                priority
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-gray-800 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -93,14 +101,14 @@ export default function Header() {
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               className="text-gray-800 hover:text-red-600 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
